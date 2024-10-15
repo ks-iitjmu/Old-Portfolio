@@ -24,7 +24,7 @@ html {
     --color4: #959595;
 }
 
-.mainpage{
+.mainpage {
     height: 100vh;
     background-color: var(--color2);
     display: flex;
@@ -32,14 +32,14 @@ html {
     align-items: center;
 }
 
-.cardcontainer img{
+.cardcontainer img {
     width: 200px;
     border-radius: 50%;
     background-color: var(--color2);
     border: solid var(--color1);
 }
 
-.cardcontainer img:hover{
+.cardcontainer img:hover {
     background-color: var(--color1);
 }
 
@@ -181,7 +181,7 @@ span {
     margin-left: 4rem;
 }
 
-.about h1 span{
+.about h1 span {
     font-size: 8rem;
 }
 
