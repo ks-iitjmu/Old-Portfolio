@@ -33,7 +33,7 @@ html {
 }
 
 .cardcontainer img{
-    width: 150px;
+    width: 200px;
     border-radius: 50%;
     background-color: var(--color2);
     border: solid var(--color1);
