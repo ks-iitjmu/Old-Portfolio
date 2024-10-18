@@ -448,7 +448,6 @@ button:active {
 .contact-right{
     display: flex;
     flex-direction: column;
-    background-color: ;
 }
 
 .contact-right .map{
