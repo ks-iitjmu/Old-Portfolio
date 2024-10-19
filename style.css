@@ -250,6 +250,8 @@ span {
     font-size: 5rem;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 100;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
 }
 
 .hover-word {
