@@ -15,6 +15,7 @@ body::-webkit-scrollbar {
 
 html {
     user-select: none;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -35,12 +36,16 @@ html {
 .cardcontainer img {
     width: 200px;
     border-radius: 50%;
-    background-color: var(--color2);
-    border: solid var(--color1);
+    background-color: var(--color1);
 }
 
-.cardcontainer img:hover {
-    background-color: var(--color1);
+.home {
+    background:
+        linear-gradient(to top left, transparent 50%, var(--color4) 50%),
+        linear-gradient(to bottom right, transparent 50%, var(--color4) 50%);
+    background-position: top left, bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
 }
 
 .home-contents {
@@ -48,6 +53,7 @@ html {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    scale: 0.9;
 }
 
 .home-contents img {
@@ -86,7 +92,7 @@ html {
     color: var(--color3);
 }
 
-.btn button:hover{
+.btn button:hover {
     color: var(--color3);
 }
 
@@ -220,7 +226,7 @@ span {
     padding: 0.5em 2em;
     border: none;
     outline: none;
-    color: var(--color3);
+    color: var(--color1);
     background: var(--color1);
     cursor: pointer;
     position: relative;
@@ -241,8 +247,6 @@ span {
     left: -2px;
     background-size: 400%;
     z-index: -1;
-    /* filter: blur(5px);
-    -webkit-filter: blur(5px); */
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     animation: glowing-button-85 20s linear infinite;
@@ -278,7 +282,12 @@ span {
 
 .projects {
     height: 100vh;
-    background-color: var(--color1);
+    background:
+        linear-gradient(to top left, transparent 50%, var(--color4) 50%),
+        linear-gradient(to bottom right, transparent 50%, var(--color4) 50%);
+    background-position: top left, bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,7 +301,7 @@ span {
     align-items: center;
 }
 
-.skills h1{
+.skills h1 {
     font-size: 5rem;
     color: var(--color1);
 }
@@ -309,19 +318,21 @@ span {
 
 
 
-
-
 .contacts {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
     background:
         linear-gradient(to top left, transparent 50%, var(--color4) 50%),
         linear-gradient(to bottom right, transparent 50%, var(--color4) 50%);
     background-position: top left, bottom right;
     background-size: 50% 50%;
     background-repeat: no-repeat;
+}
+
+.contacts-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    scale: 0.9;
 }
 
 .container {
@@ -445,18 +456,18 @@ button:active {
     transform: scale(1.2);
 }
 
-.contact-right{
+.contact-right {
     display: flex;
     flex-direction: column;
 }
 
-.contact-right .map{
+.contact-right .map {
     border: groove .5rem var(--color3);
     border-radius: .5rem;
     margin-top: 4rem;
 }
 
-.container1{
+.container1 {
     width: 100%;
     max-width: 660px;
     background: linear-gradient(120deg, #c189fe, #37034f);
@@ -466,13 +477,13 @@ button:active {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-iframe{
+iframe {
     border-radius: 1.5rem;
     margin: auto;
     margin-top: 1.5rem;
     width: 715px;
     height: 390px;
-    box-shadow: 0 4px 4px  var(--color2);
+    box-shadow: 0 4px 4px var(--color2);
 }
 
 .footer-col {
@@ -496,14 +507,30 @@ iframe{
     font-size: 1.2rem;
     font-weight: 200;
     text-transform: capitalize;
-    padding-bottom: .9rem;
+    padding-top: 20px;
     transition: 0.5s ease;
     color: var(--color1);
+    position: relative;
+    display: inline-block;
 }
 
-.footer-col .pages a h1:hover {
-    transform: translateX(10px);
-    color: var(--color4);
+.footer-col .pages a h1::after {
+    content: ''; /* Create a pseudo-element */
+  position: absolute;
+  width: 100%; /* Full width of the element */
+  height: 2px; /* Thickness of the underline */
+  left: 0;
+  bottom: -3px;
+  background-color: var(--color1); /* Color of the underline */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: left; /* Animate from left to right */
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.footer-col .pages a h1:hover::after {
+    transform: scaleX(1);
+    /* Show the underline on hover */
+    transform-origin: left;
 }
 
 .footer-col .pages a {
@@ -511,6 +538,22 @@ iframe{
     word-spacing: 5px;
 }
 
+.footer-col .pages .heading-footer h1 {
+    font-size: 3rem;
+    color: var(--color1);
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.footer-col .pages .heading-footer h1::after{
+    content: ''; /* Create a pseudo-element */
+    position: absolute;
+    width: 100%; /* Full width of the element */
+    height: 4px; /* Thickness of the underline */
+    left: 0;
+    bottom: -10px;
+    background-color: var(--color3);
+}
 .copy {
     background-color: var(--color2);
     display: flex;
