@@ -64,7 +64,7 @@ html {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.icon{
+.icon {
     display: flex;
     justify-content: center;
     align-items: center;
