@@ -39,6 +39,61 @@ html {
     background-color: var(--color1);
 }
 
+.sidebar {
+    position: absolute;
+    top: opx;
+    left: 0;
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    border-radius: 1rem;
+    background-color: #9595955d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .icon {
+    width: 60px;
+    height: 60px;
+    margin: 15px 0;
+    background-color: rgba(0, 0, 0, 0.618);
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .icon:hover {
+    transform: scale(1.1);
+}
+
+.icon.Home::before {
+    content: url(icons/home.svg);
+}
+
+.icon.About::before {
+    content: url(icons/info.svg);
+}
+
+.icon.Projects::before {
+    content: url(icons/folder.svg);
+}
+
+.icon.Skills::before {
+    content: url(icons/cog.svg);
+}
+
+.icon.Contact7::before {
+    content: url(icons/person.svg);
+}
+
 .home {
     background:
         linear-gradient(to top left, transparent 50%, var(--color4) 50%),
@@ -515,16 +570,16 @@ iframe {
 }
 
 .footer-col .pages a h1::after {
-    content: ''; /* Create a pseudo-element */
-  position: absolute;
-  width: 100%; /* Full width of the element */
-  height: 2px; /* Thickness of the underline */
-  left: 0;
-  bottom: -3px;
-  background-color: var(--color1); /* Color of the underline */
-  transform: scaleX(0); /* Initially hide the underline */
-  transform-origin: left; /* Animate from left to right */
-  transition: transform 0.5s ease; /* Smooth transition */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background-color: var(--color1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
 }
 
 .footer-col .pages a h1:hover::after {
@@ -545,15 +600,16 @@ iframe {
     margin-bottom: 2rem;
 }
 
-.footer-col .pages .heading-footer h1::after{
-    content: ''; /* Create a pseudo-element */
+.footer-col .pages .heading-footer h1::after {
+    content: '';
     position: absolute;
-    width: 100%; /* Full width of the element */
-    height: 4px; /* Thickness of the underline */
+    width: 100%;
+    height: 4px;
     left: 0;
     bottom: -10px;
     background-color: var(--color3);
 }
+
 .copy {
     background-color: var(--color2);
     display: flex;
