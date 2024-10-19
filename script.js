@@ -4,12 +4,6 @@ VanillaTilt.init(document.querySelectorAll(".box"),
         speed: 200
     });
 
-VanillaTilt.init(document.querySelectorAll(".about-container"),
-    {
-        max: 5,
-        speed: 200
-    });
-
 ScrollReveal().reveal('.text', {
     duration: 2000,
     origin: 'top',
@@ -54,3 +48,11 @@ ScrollReveal().reveal('.box', {
     distance: '100px',
     easily: 'ease'
 });
+
+const textElement = document.getElementById('text');
+
+const words = textElement.innerHTML.split(' ').map(word => {
+    return `<span class="hover-word">${word}</span>`;
+}).join('  ');
+
+textElement.innerHTML = words;

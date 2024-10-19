@@ -224,77 +224,104 @@ span {
     height: 100vh;
     background-color: var(--color2);
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.about .about-container {
-    padding: 5rem;
-    margin: 2rem;
-    border-radius: 3rem;
-    height: 500px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.about h1 {
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container{
+    padding-top: 2.5rem;
+    height: 100vh;
+    width: 50%;
+    margin-left: 1rem;
+    position: absolute;
+    left: 0;
+    letter-spacing: 3px;
+    color: var(--color1);
+}
+
+.about-heading h5{
+    color: var(--color1);
+    padding-top: 3rem;
     font-size: 5rem;
-    color: var(--color1);
-    text-align: center;
-    margin-left: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
 }
 
-.about h1 span {
-    font-size: 8rem;
+.about-heading h4{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 100;
+    color: rgb(0, 204, 255);
+    animation: disappear;
+    animation-duration: 5s;
+    animation-delay: 3s;
 }
 
-.about .about-container p {
-    font-size: 1.5rem;
-    color: var(--color1);
-    text-align: center;
+.hover-word {
+    transition: color 0.3s ease;
+    cursor: text;
+    font-size: 2.5rem;
+    color: rgb(89, 89, 89);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
 }
 
-.about .about-container img {
-    border-radius: 50%;
+.hover-word:hover {
+    color: rgb(0, 204, 255);
+    font-weight: 700;
 }
 
-.about .about-container {
-    box-shadow: 1px 5px 5px 3px var(--color1);
+#kunal {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s linear 5s;
+    animation: hideAfterFive 7s forwards;
 }
 
-.btn-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.4rem;
+@keyframes hideAfterFive {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
-.btn-2 button {
-    text-shadow: 1px 1px var(--color2);
-    letter-spacing: 2px;
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
 
-.button-86 {
+
+
+
+.about-head {
     padding: 0.5em 2em;
     border: none;
     outline: none;
     color: var(--color1);
     background: var(--color1);
-    cursor: pointer;
-    position: relative;
+    position: absolute;
+    right: 5rem;
     z-index: 0;
     border-radius: 10px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 100;
 }
 
-.button-86:before {
+.about-head:before {
     content: "";
     background: linear-gradient(45deg, #8a2be2, #0d8f7e, #8f0d4a, #0059ff, #9d00ff, #ff0066);
     position: absolute;
@@ -323,7 +350,7 @@ span {
     }
 }
 
-.button-86:after {
+.about-head:after {
     z-index: -1;
     content: "";
     position: absolute;
