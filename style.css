@@ -253,16 +253,6 @@ span {
     font-weight: 100;
 }
 
-.about-heading h4{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
-    font-weight: 100;
-    color: rgb(0, 204, 255);
-    animation: disappear;
-    animation-duration: 5s;
-    animation-delay: 3s;
-}
-
 .hover-word {
     transition: color 0.3s ease;
     cursor: text;
@@ -276,33 +266,6 @@ span {
     color: rgb(0, 204, 255);
     font-weight: 700;
 }
-
-#kunal {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s ease, visibility 0s linear 5s;
-    animation: hideAfterFive 7s forwards;
-}
-
-@keyframes hideAfterFive {
-    0% {
-        opacity: 1;
-        visibility: visible;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-.hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
-
-
-
 
 .about-head {
     padding: 0.5em 2em;
