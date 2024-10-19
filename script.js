@@ -45,3 +45,12 @@ ScrollReveal().reveal('iframe', {
     delay: 200,
     opacity: 0
 });
+
+ScrollReveal().reveal('.box', { 
+    duration: 2000, 
+    delay: 200, 
+    reset: false,
+    origin: 'bottom',
+    distance: '100px',
+    easily: 'ease'
+});
