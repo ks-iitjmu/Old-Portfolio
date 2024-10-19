@@ -637,6 +637,10 @@ iframe {
         margin-left: 3rem;
     }
 
+    .cardcontainer{
+        scale: 1.3;
+    }
+
     .home .text h1 {
         font-size: 3rem;
     }
@@ -779,6 +783,9 @@ iframe {
         grid-template-rows: 1fr 1fr;
         gap: 10px;
     }
+    .cardcontainer{
+        scale: 1;
+    }
 }
 
 @media (max-width: 575px){
@@ -826,7 +833,7 @@ iframe {
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 440px){
     .box{
         scale: 0.7;
     }
@@ -837,10 +844,10 @@ iframe {
 
 @media (max-width: 322px){
     .box{
-        scale: 0.9;
+        scale: 0.7;
     }
     .home img{
-        scale: 0.7;
+        scale: 1;
     }
     .text{
         scale: 0.7;
