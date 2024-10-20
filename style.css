@@ -481,7 +481,7 @@ html {
 }
 
 @media screen and (max-width: 320px) {
-    .container {
+    .contain {
         margin-inline: 1rem;
     }
 
@@ -511,7 +511,7 @@ html {
 }
 
 @media screen and (min-width: 1120px) {
-    .container {
+    .contain {
         height: 100vh;
     }
 
