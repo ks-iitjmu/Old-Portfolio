@@ -52,34 +52,34 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .cardcontainer img {
-    width: 400px;
+    width: 40vw;
+    max-width: 400px;
     border-radius: 50%;
     background-color: var(--color1);
 }
 
 .sidebar {
     position: absolute;
-    top: opx;
+    top: 50%;
     right: 0;
+    transform: translateY(-50%);
     width: 80px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 10px;
+    padding: 10px;
     border-radius: 1rem;
     background-color: #9595955d;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 15px;
 }
 
 .sidebar .icon {
     width: 60px;
     height: 60px;
-    margin: 15px 0;
     background-color: rgba(0, 0, 0, 0.618);
     border-radius: 12px;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -115,9 +115,43 @@ html {
     content: url(icons/person.svg);
 }
 
+@media (max-width: 768px) {
+    .cardcontainer img {
+        width: 60vw;
+    }
+
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar .icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .mainpage {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        bottom: 0;
+        top: auto;
+        right: 50%;
+        transform: translateX(50%);
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .sidebar .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
 
 /* Home Page CSS SOURCE CODE */
-
 .home {
     background:
         linear-gradient(to top left, transparent 50%, var(--color4) 50%),
@@ -239,9 +273,90 @@ html {
     text-decoration: none;
 }
 
+@media screen and (max-width: 1200px) {
+    .home-contents img {
+        width: 600px;
+        margin-right: 1rem;
+    }
+
+    .home-contents .text h1 {
+        font-size: 3rem;
+    }
+
+    .home-contents .text h2,
+    .home-contents .text h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .home-contents {
+        flex-direction: column;
+        scale: 1;
+    }
+
+    .home-contents img {
+        width: 400px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .home-contents .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-contents .text h2,
+    .home-contents .text h3 {
+        font-size: 1.3rem;
+    }
+
+    .button-85 {
+        font-size: 1rem;
+        padding: 0.4em 1.5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-contents img {
+        width: 350px;
+    }
+
+    .home-contents .text h1 {
+        font-size: 2rem;
+    }
+
+    .home-contents .text h2,
+    .home-contents .text h3 {
+        font-size: 1.2rem;
+    }
+
+    .button-85 {
+        font-size: 0.9rem;
+        padding: 0.3em 1em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .home-contents img {
+        width: 280px;
+    }
+
+    .home-contents .text h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-contents .text h2,
+    .home-contents .text h3 {
+        font-size: 1rem;
+    }
+
+    .button-85 {
+        font-size: 0.8rem;
+        padding: 0.3em 0.8em;
+    }
+}
 
 /* About Page CSS SOURCE CODE */
-
 .about {
     height: 100vh;
     background-color: var(--color2);
@@ -332,6 +447,92 @@ html {
     border-radius: 10px;
 }
 
+@media (max-width: 1424px) {
+    .about-container {
+        width: 80%;
+        height: 80vh;
+        overflow-y: auto;
+    }
+
+    .about-heading {
+        display: none;
+        position: relative;
+        right: auto;
+        background: none;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .about-heading h5 {
+        font-size: 4rem;
+        color: var(--color1);
+    }
+
+    .about-head {
+        right: 3rem;
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        width: 90%;
+        padding-top: 2rem;
+        height: 80vh;
+        letter-spacing: 1px;
+        overflow-y: scroll;
+    }
+
+    .about-heading {
+        position: relative;
+        background: none;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .about-heading h5 {
+        font-size: 3rem;
+    }
+
+    .about-head {
+        right: 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        width: 100%;
+        padding-top: 1.5rem;
+        height: 90vh;
+        overflow-y: scroll;
+        letter-spacing: 1px;
+    }
+
+    .about-heading {
+        position: relative;
+        background: none;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-heading h5 {
+        font-size: 2rem;
+    }
+
+    #text {
+        font-size: 1rem;
+    }
+
+    .about-head {
+        right: 1rem;
+        font-size: 1.25rem;
+    }
+}
+
 
 /* Projects Page CSS SOURCE CODE */
 
@@ -348,7 +549,7 @@ html {
     align-items: center;
 }
 
-.contain  {
+.contain {
     display: grid;
     place-items: center;
     margin-inline: 1.5rem;
