@@ -1,6 +1,12 @@
 VanillaTilt.init(document.querySelectorAll(".box"),
     {
-        max: 5,
+        max: 10,
+        speed: 200
+    });
+
+VanillaTilt.init(document.querySelectorAll(".card__article"),
+    {
+        max: 10,
         speed: 200
     });
 
