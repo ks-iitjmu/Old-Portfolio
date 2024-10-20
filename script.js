@@ -30,7 +30,7 @@ ScrollReveal().reveal('.text', {
     opacity: 0
 });
 
-ScrollReveal().reveal('.container', {
+ScrollReveal().reveal('.container4', {
     duration: 2000,
     origin: 'left',
     distance: '100px',
