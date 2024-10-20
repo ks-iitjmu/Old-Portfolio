@@ -1,3 +1,7 @@
+// Kunal Sharma IIT JAMMU Portfolio Source Code
+// Made For Personal Use And All Copyrights are Reserved
+
+// Tilt Effect Javascript
 VanillaTilt.init(document.querySelectorAll(".box"),
     {
         max: 10,
@@ -10,6 +14,7 @@ VanillaTilt.init(document.querySelectorAll(".card__article"),
         speed: 200
     });
 
+//ScrollReveal Effect JavaScript
 ScrollReveal().reveal('.text', {
     duration: 2000,
     origin: 'top',
@@ -55,6 +60,7 @@ ScrollReveal().reveal('.box', {
     easily: 'ease'
 });
 
+// About Page Javascript
 const textElement = document.getElementById('text');
 
 const words = textElement.innerHTML.split(' ').map(word => {

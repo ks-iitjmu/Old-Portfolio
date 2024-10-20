@@ -1,8 +1,12 @@
+/* Kunal Sharma IIT JAMMU Portfolio Source Code */
+/* Made For Personal Use And All Copyrights are Reserved */
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Nunito:wght@300;400;600;700;800;900&family=Russo+One&family=Spartan:wght@700;800;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
 
+/* base styling */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +15,15 @@
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+span {
+    color: var(--color3);
+    font-size: 3.3rem;
+}
+
+a {
+    text-decoration: none;
 }
 
 html {
@@ -23,8 +36,16 @@ html {
     --color2: #000000;
     --color3: #8a2be2;
     --color4: #959595;
+    --white-color: #fff;
+    --black-color: hsl(210, 12%, 15%);
+    --body-color: hsl(210, 16%, 12%);
+    --container-color: hsl(210, 24%, 8%);
+    --body-font: "Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
 }
 
+/* Main Page CSS SOURCE CODE */
 .mainpage {
     height: 100vh;
     background-color: var(--color2);
@@ -93,6 +114,9 @@ html {
 .icon.Contact7::before {
     content: url(icons/person.svg);
 }
+
+
+/* Home Page CSS SOURCE CODE */
 
 .home {
     background:
@@ -215,10 +239,8 @@ html {
     text-decoration: none;
 }
 
-span {
-    color: var(--color3);
-    font-size: 3.3rem;
-}
+
+/* About Page CSS SOURCE CODE */
 
 .about {
     height: 100vh;
@@ -298,20 +320,6 @@ span {
     border-radius: 10px;
 }
 
-@keyframes glowing-button-85 {
-    0% {
-        background-position: 0 0;
-    }
-
-    50% {
-        background-position: 400% 0;
-    }
-
-    100% {
-        background-position: 0 0;
-    }
-}
-
 .about-head:after {
     z-index: -1;
     content: "";
@@ -324,6 +332,9 @@ span {
     border-radius: 10px;
 }
 
+
+/* Projects Page CSS SOURCE CODE */
+
 .projects {
     height: 100vh;
     background:
@@ -335,33 +346,6 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-:root {
-    --white-color: #fff;
-    --black-color: hsl(210, 12%, 15%);
-    --body-color: hsl(210, 16%, 12%);
-    --container-color: hsl(210, 24%, 8%);
-    --body-font: "Poppins", sans-serif;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: .938rem;
-}
-
-@media screen and (min-width: 1024px) {
-    :root {
-        --h2-font-size: 1.5rem;
-        --normal-font-size: 1rem;
-    }
-}
-
-* {
-    padding: 0;
-    margin: 0;
-}
-
-
-a {
-    text-decoration: none;
 }
 
 .contain {
@@ -501,51 +485,8 @@ a {
     transition-delay: 0.1s;
 }
 
-@media screen and (max-width: 320px) {
-    .contain {
-        margin-inline: 1rem;
-    }
 
-    .card__article {
-        padding: 2rem 1rem;
-    }
-
-    .card__scale-1 {
-        top: 2rem;
-    }
-
-    .card__scale-2 {
-        top: 3rem;
-    }
-}
-
-/* For medium devices */
-@media screen and (min-width: 576px) {
-    .card__container {
-        grid-template-columns: 328px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .card__container {
-        grid-template-columns: repeat(2, 328px);
-    }
-}
-
-/* For large devices */
-@media screen and (min-width: 1120px) {
-    .contain {
-        height: 100vh;
-    }
-
-    .card__container {
-        grid-template-columns: repeat(3, 345px);
-    }
-
-    .card__article {
-        padding: 4.5rem 2rem 3.5rem;
-    }
-}
+/* Skills Page CSS SOURCE CODE */
 
 .skills {
     height: 100vh;
@@ -653,6 +594,9 @@ a {
 .item8 {
     animation-delay: calc(30s / 8 * (8 - 8) * -1);
 }
+
+
+/* Contacts Page CSS SOURCE CODE */
 
 .contacts {
     background:
@@ -828,6 +772,9 @@ iframe {
     box-shadow: 0 4px 4px var(--color2);
 }
 
+
+/* Footer Page CSS SOURCE CODE */
+
 .footer-col {
     background-color: var(--color2);
     display: flex;
@@ -895,6 +842,9 @@ iframe {
     bottom: -10px;
     background-color: var(--color3);
 }
+
+
+/* CopyRight Messge CSS SOURCE CODE */
 
 .copy {
     background-color: var(--color2);
