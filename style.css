@@ -354,7 +354,12 @@ html {
     margin-inline: 1.5rem;
 }
 
-.card__container,
+.card__container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
 .card__article {
     display: grid;
     gap: 2rem;
@@ -419,13 +424,14 @@ html {
 }
 
 .card__title {
-    font-size: var(--h2-font-size);
+    font-size: var(2rem);
     margin-bottom: 0.25rem;
     font-weight: 600;
     color: var(--color1);
 }
 
 .card__description {
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
 
