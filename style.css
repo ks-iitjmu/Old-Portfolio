@@ -348,18 +348,13 @@ html {
     align-items: center;
 }
 
-.contain {
+.contain  {
     display: grid;
     place-items: center;
     margin-inline: 1.5rem;
 }
 
-.card__container {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-}
-
+.card__container,
 .card__article {
     display: grid;
     gap: 2rem;
@@ -424,29 +419,23 @@ html {
 }
 
 .card__title {
-    font-size: var(2rem);
+    font-size: 2rem;
+    color: var(--color1);
     margin-bottom: 0.25rem;
     font-weight: 600;
-    color: var(--color1);
 }
 
 .card__description {
-    font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
 
 .card__button {
     display: inline-block;
     background-color: var(--white-color);
-    padding: 10px;
+    padding: 1rem 1.5rem;
     border-radius: 0.5rem;
     color: var(--black-color);
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-.card__button:hover {
-    color: blue;
+    font-weight: 500;
 }
 
 .card__orange {
@@ -489,6 +478,50 @@ html {
 .card__article:hover .card__scale-2 {
     transform: scale(6);
     transition-delay: 0.1s;
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .card__article {
+        padding: 2rem 1rem;
+    }
+
+    .card__scale-1 {
+        top: 2rem;
+    }
+
+    .card__scale-2 {
+        top: 3rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .card__container {
+        grid-template-columns: 328px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card__container {
+        grid-template-columns: repeat(2, 328px);
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .container {
+        height: 100vh;
+    }
+
+    .card__container {
+        grid-template-columns: repeat(3, 345px);
+    }
+
+    .card__article {
+        padding: 4.5rem 2rem 3.5rem;
+    }
 }
 
 
