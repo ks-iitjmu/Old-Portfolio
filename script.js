@@ -14,6 +14,12 @@ VanillaTilt.init(document.querySelectorAll(".card__article"),
         speed: 200
     });
 
+VanillaTilt.init(document.querySelectorAll(".cardcontainer"),
+    {
+        max: 20,
+        speed: 200
+    });
+
 //ScrollReveal Effect JavaScript
 ScrollReveal().reveal('.text', {
     duration: 2000,
