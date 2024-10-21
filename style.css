@@ -134,6 +134,7 @@ html {
     .mainpage {
         flex-direction: column;
         height: 100vh;
+        transform: translateY(-7vh);
     }
 
     .sidebar {
