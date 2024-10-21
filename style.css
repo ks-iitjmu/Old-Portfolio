@@ -133,7 +133,7 @@ html {
 @media (max-width: 576px) {
     .mainpage {
         flex-direction: column;
-        height: 93vh;
+        height: 95vh;
     }
 
     .sidebar {
