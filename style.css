@@ -141,13 +141,12 @@ html {
         top: auto;
         right: 50%;
         transform: translateX(50%);
-        width: 100%;
+        width: 90%;
         justify-content: space-around;
     }
 
     .sidebar .icon {
-        width: 40px;
-        height: 40px;
+        background-color: transparent;
     }
 }
 
@@ -287,6 +286,10 @@ html {
     .home-contents .text h3 {
         font-size: 1.5rem;
     }
+    .button-85{
+        width: 60%;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -309,10 +312,9 @@ html {
     .home-contents .text h3 {
         font-size: 1.3rem;
     }
-
-    .button-85 {
+    .button-85{
+        width: 40%;
         font-size: 1rem;
-        padding: 0.4em 1.5em;
     }
 }
 
@@ -330,9 +332,9 @@ html {
         font-size: 1.2rem;
     }
 
-    .button-85 {
-        font-size: 0.9rem;
-        padding: 0.3em 1em;
+    .button-85{
+        width: 40%;
+        height: auto;
     }
 }
 
@@ -350,9 +352,9 @@ html {
         font-size: 1rem;
     }
 
-    .button-85 {
-        font-size: 0.8rem;
-        padding: 0.3em 0.8em;
+    .button-85{
+        width: 40%;
+        height: auto;
     }
 }
 
@@ -504,7 +506,7 @@ html {
 
 @media (max-width: 480px) {
     .about-container {
-        width: 100%;
+        width: 90%;
         padding-top: 1.5rem;
         height: 90vh;
         overflow-y: scroll;
@@ -523,7 +525,7 @@ html {
         font-size: 2rem;
     }
 
-    #text {
+    #text{
         font-size: 1rem;
     }
 
@@ -536,129 +538,7 @@ html {
 
 /* Projects Page CSS SOURCE CODE */
 
-.projects {
-    height: 100vh;
-    background:
-        linear-gradient(to top left, transparent 50%, var(--color4) 50%),
-        linear-gradient(to bottom right, transparent 50%, var(--color4) 50%);
-    background-position: top left, bottom right;
-    background-size: 50% 50%;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    gap: 3rem;
-    flex-flow: column;
-    position: relative;
-}
-
-.carousel {
-    max-width: 70%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-}
-
-.carousel .item {
-    width: 20%;
-    height: 300px;
-    max-width: 300px;
-    margin: 6px;
-    transition: 0.5s;
-    object-fit: cover;
-    filter: brightness(1);
-}
-
-.item {
-    padding: 20px;
-    border-radius: 15px;
-    background: linear-gradient(to bottom, #9c27b0, #6a1b9a);
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin: 100px;
-}
-
-.icon-container {
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    background-color: black;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.icon {
-    font-size: 28px;
-    color: #8e24aa;
-}
-
-.link {
-    font-size: 2rem;
-}
-
-.content {
-    text-align: center;
-    color: #333;
-}
-
-h2 {
-    margin: 0 0 15px;
-    font-size: 48px;
-    font-family: 'Arial', sans-serif;
-    color: black;
-}
-
-p {
-    font-size: 25px;
-    color: black;
-    margin: 0;
-}
-
-
-.carousel .item:hover {
-    filter: brightness(1);
-    transform: translateZ(170px);
-}
-
-.carousel .item:hover+* {
-    filter: brightness(0.6);
-    transform: translateZ(120px) rotateY(25deg);
-}
-
-.carousel .item:hover+*+* {
-    filter: brightness(0.4);
-    transform: translateZ(50px) rotateY(15deg);
-}
-
-.carousel .item:has(+ *:hover) {
-    filter: brightness(0.6);
-    transform: translateZ(120px) rotateY(-25deg);
-}
-
-.carousel .item:has(+ * + *:hover) {
-    filter: brightness(0.4);
-    transform: translateZ(50px) rotateY(-15deg);
-}
 
 /* Skills Page CSS SOURCE CODE */
 
@@ -961,6 +841,7 @@ iframe {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap; /* Ensure it wraps for smaller screens */
 }
 
 .footer-col .pages {
@@ -1023,6 +904,54 @@ iframe {
     bottom: -10px;
     background-color: var(--color3);
 }
+
+/* Responsive Styles for smaller screens */
+@media only screen and (max-width: 768px) {
+    .heading-footer{
+        width: 70%;
+    }
+
+    .pages{
+        scale: 0.9;
+    }
+
+    .footer-col {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+    }
+
+    .footer-col .pages {
+        margin-right: 0;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .footer-col .pages a h1 {
+        font-size: 1rem; /* Smaller font size on mobile */
+    }
+
+    .footer-col .pages .heading-footer h1 {
+        font-size: 2rem; /* Smaller header font size on mobile */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .heading-footer{
+        width: 70%;
+    }
+    .footer-col .pages {
+        padding: 0.5rem; /* Reduce padding for very small screens */
+    }
+
+    .footer-col .pages a h1 {
+        font-size: 0.9rem; /* Smaller font size on very small screens */
+    }
+
+    .footer-col .pages .heading-footer h1 {
+        font-size: 1.8rem; /* Smaller header font size on very small screens */
+    }
+}
+
 
 
 /* CopyRight Messge CSS SOURCE CODE */
