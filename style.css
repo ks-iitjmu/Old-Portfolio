@@ -287,7 +287,8 @@ html {
     .home-contents .text h3 {
         font-size: 1.5rem;
     }
-    .button-85{
+
+    .button-85 {
         width: 60%;
         height: auto;
     }
@@ -313,7 +314,8 @@ html {
     .home-contents .text h3 {
         font-size: 1.3rem;
     }
-    .button-85{
+
+    .button-85 {
         width: 40%;
         font-size: 1rem;
     }
@@ -333,7 +335,7 @@ html {
         font-size: 1.2rem;
     }
 
-    .button-85{
+    .button-85 {
         width: 40%;
         height: auto;
     }
@@ -353,7 +355,7 @@ html {
         font-size: 1rem;
     }
 
-    .button-85{
+    .button-85 {
         width: 40%;
         height: auto;
     }
@@ -526,7 +528,7 @@ html {
         font-size: 2rem;
     }
 
-    #text{
+    #text {
         font-size: 1rem;
     }
 
@@ -536,8 +538,120 @@ html {
     }
 }
 
+@media (max-width: 1630px) {
+    #text{
+        font-size: 2.35rem;
+    }
+}
+
 
 /* Projects Page CSS SOURCE CODE */
+
+.projects {
+    height: 100vh;
+    background:
+        linear-gradient(to top left, transparent 50%, var(--color4) 50%),
+        linear-gradient(to bottom right, transparent 50%, var(--color4) 50%);
+    background-position: top left, bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: var(--color1);
+    color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.project-heading h1{
+    font-size: 6rem;
+    color: var(--color3);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--color2);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #6e6e73;
+    margin: 0;
+}
+
+.card-subtitle {
+    color: var(--color1);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.card-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.card-footer p {
+    font-size: 14px;
+    color: #6e6e73;
+    margin: 0;
+}
+
+.play-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.play-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #0071e3;
+}
+
+@media (min-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
 
 
 
@@ -592,7 +706,7 @@ html {
 .itemRight {
     width: 200px;
     height: 100px;
-    background-color: var(--color4);
+    background-color: var(--color3);
     border-radius: 6px;
     position: absolute;
     display: flex;
@@ -842,7 +956,8 @@ iframe {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap; /* Ensure it wraps for smaller screens */
+    flex-wrap: wrap;
+    /* Ensure it wraps for smaller screens */
 }
 
 .footer-col .pages {
@@ -908,16 +1023,17 @@ iframe {
 
 /* Responsive Styles for smaller screens */
 @media only screen and (max-width: 768px) {
-    .heading-footer{
+    .heading-footer {
         width: 70%;
     }
 
-    .pages{
+    .pages {
         scale: 0.9;
     }
 
     .footer-col {
-        flex-direction: column; /* Stack items vertically on small screens */
+        flex-direction: column;
+        /* Stack items vertically on small screens */
         align-items: center;
     }
 
@@ -928,28 +1044,34 @@ iframe {
     }
 
     .footer-col .pages a h1 {
-        font-size: 1rem; /* Smaller font size on mobile */
+        font-size: 1rem;
+        /* Smaller font size on mobile */
     }
 
     .footer-col .pages .heading-footer h1 {
-        font-size: 2rem; /* Smaller header font size on mobile */
+        font-size: 2rem;
+        /* Smaller header font size on mobile */
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .heading-footer{
+    .heading-footer {
         width: 70%;
     }
+
     .footer-col .pages {
-        padding: 0.5rem; /* Reduce padding for very small screens */
+        padding: 0.5rem;
+        /* Reduce padding for very small screens */
     }
 
     .footer-col .pages a h1 {
-        font-size: 0.9rem; /* Smaller font size on very small screens */
+        font-size: 0.9rem;
+        /* Smaller font size on very small screens */
     }
 
     .footer-col .pages .heading-footer h1 {
-        font-size: 1.8rem; /* Smaller header font size on very small screens */
+        font-size: 1.8rem;
+        /* Smaller header font size on very small screens */
     }
 }
 
