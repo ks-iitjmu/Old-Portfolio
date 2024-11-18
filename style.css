@@ -63,7 +63,7 @@ html {
 }
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
@@ -578,26 +578,31 @@ html {
 /* Responsive for tablets and smaller devices */
 @media (max-width: 1024px) {
     .project-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for tablets */
     }
 
     .project-heading {
-        font-size: 3rem; /* Slightly smaller font for headings */
+        font-size: 3rem;
+        /* Slightly smaller font for headings */
     }
 
     .projects {
-        padding: 3rem; /* Reduce padding for smaller screens */
+        padding: 3rem;
+        /* Reduce padding for smaller screens */
     }
 }
 
 /* Responsive for mobile devices */
 @media (max-width: 768px) {
     .project-container {
-        grid-template-columns: 1fr; /* 1 column for mobile */
+        grid-template-columns: 1fr;
+        /* 1 column for mobile */
     }
 
     .project-heading {
-        font-size: 2.5rem; /* Further reduce heading size */
+        font-size: 2.5rem;
+        /* Further reduce heading size */
         margin-bottom: 2rem;
     }
 
@@ -673,7 +678,8 @@ html {
 /* Responsive image adjustments */
 @media (max-width: 768px) {
     .card-img {
-        width: 100%; /* Full-width images for mobile */
+        width: 100%;
+        /* Full-width images for mobile */
         padding: 1rem;
     }
 }
@@ -937,7 +943,38 @@ button:active {
 .social img {
     width: 100px;
     padding-left: 1rem;
-    transition: 0.5s ease;
+    animation: shiverEffect 0.6s ease-out infinite;
+    transform-origin: center;
+}
+
+.social img:hover {
+    
+}
+
+@keyframes shiverEffect {
+    0% {
+        transform: rotate(-2deg) scale(1.02);
+        animation-timing-function: ease-in;
+    }
+
+    25% {
+        transform: rotate(2deg) scale(0.98);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        transform: rotate(-1.5deg) scale(1.01);
+        animation-timing-function: ease-in;
+    }
+
+    75% {
+        transform: rotate(1.5deg) scale(0.99);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
 }
 
 .social img:hover {
