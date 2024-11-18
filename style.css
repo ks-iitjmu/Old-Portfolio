@@ -10,7 +10,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: syne;
+    font-family: Syne;
 }
 
 body::-webkit-scrollbar {
@@ -63,7 +63,7 @@ html {
 }
 
 .sidebar {
-    position: fixed;
+    position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
@@ -945,10 +945,6 @@ button:active {
     padding-left: 1rem;
     animation: shiverEffect 0.6s ease-out infinite;
     transform-origin: center;
-}
-
-.social img:hover {
-    
 }
 
 @keyframes shiverEffect {
