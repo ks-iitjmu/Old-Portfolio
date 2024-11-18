@@ -547,19 +547,63 @@ html {
 /* Projects Page CSS SOURCE CODE */
 
 .projects {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: var(--color1);
     user-select: none;
+    padding: 5rem;
+    background:
+        linear-gradient(to top left, transparent 50%, var(--color4) 50%),
+        linear-gradient(to bottom right, transparent 50%, var(--color4) 50%);
+    background-position: top left, bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
 }
 
 .project-heading {
     font-size: 4rem;
     color: var(--color3);
     margin-bottom: 4rem;
+    text-align: center;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Responsive for tablets and smaller devices */
+@media (max-width: 1024px) {
+    .project-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+
+    .project-heading {
+        font-size: 3rem; /* Slightly smaller font for headings */
+    }
+
+    .projects {
+        padding: 3rem; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 768px) {
+    .project-container {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+
+    .project-heading {
+        font-size: 2.5rem; /* Further reduce heading size */
+        margin-bottom: 2rem;
+    }
+
+    .projects {
+        padding: 2rem;
+    }
 }
 
 .card-p {
@@ -587,42 +631,63 @@ html {
     font-weight: 200;
 }
 
-.buttons{
+/* Adjust card-title font-size for smaller screens */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 2.5rem;
+    }
+}
+
+.buttons {
     margin: auto;
     margin-bottom: 2rem;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
-.link .card-button {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+.card-button {
+    width: 100%;
+    padding: 0.5rem 2rem;
     font-size: 1.2rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-radius: 0.5rem;
     border: none;
     background-color: var(--color1);
+    text-align: center;
 }
 
-.link .card-button:hover {
+.card-button:hover {
     background-color: var(--color3);
     color: var(--color1);
     cursor: pointer;
 }
+
 .card-img {
     width: 400px;
     background-color: var(--color1);
-    border-radius:  1rem;
+    border-radius: 1rem;
     padding: 2rem;
+}
+
+/* Responsive image adjustments */
+@media (max-width: 768px) {
+    .card-img {
+        width: 100%; /* Full-width images for mobile */
+        padding: 1rem;
+    }
 }
 
 .p-img {
     width: 400px;
 }
 
+/* Adjust image sizes for smaller screens */
+@media (max-width: 768px) {
+    .p-img {
+        width: 100%;
+    }
+}
 
 /* Skills Page CSS SOURCE CODE */
 
