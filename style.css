@@ -564,45 +564,38 @@ html {
 
 .project-heading {
     font-size: 4rem;
-    color: var(--color3);
+    color: var(--color2);
     margin-bottom: 4rem;
     text-align: center;
 }
 
 .project-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
-/* Responsive for tablets and smaller devices */
 @media (max-width: 1024px) {
     .project-container {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 columns for tablets */
     }
 
     .project-heading {
         font-size: 3rem;
-        /* Slightly smaller font for headings */
     }
 
     .projects {
         padding: 3rem;
-        /* Reduce padding for smaller screens */
     }
 }
 
-/* Responsive for mobile devices */
 @media (max-width: 768px) {
     .project-container {
         grid-template-columns: 1fr;
-        /* 1 column for mobile */
     }
 
     .project-heading {
         font-size: 2.5rem;
-        /* Further reduce heading size */
         margin-bottom: 2rem;
     }
 
@@ -636,7 +629,6 @@ html {
     font-weight: 200;
 }
 
-/* Adjust card-title font-size for smaller screens */
 @media (max-width: 768px) {
     .card-title {
         font-size: 2.5rem;
@@ -675,11 +667,9 @@ html {
     padding: 2rem;
 }
 
-/* Responsive image adjustments */
 @media (max-width: 768px) {
     .card-img {
         width: 100%;
-        /* Full-width images for mobile */
         padding: 1rem;
     }
 }
@@ -688,7 +678,6 @@ html {
     width: 400px;
 }
 
-/* Adjust image sizes for smaller screens */
 @media (max-width: 768px) {
     .p-img {
         width: 100%;
@@ -823,7 +812,6 @@ html {
     height: 100vh;
     scale: 0.9;
     flex-wrap: wrap;
-    /* Ensures responsiveness by wrapping content */
 }
 
 .container4 {
