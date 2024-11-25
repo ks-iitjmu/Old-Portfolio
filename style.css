@@ -132,7 +132,7 @@ html {
 @media (max-width: 576px) {
     .mainpage {
         flex-direction: column;
-        height: 93vh;
+        height: 100vh;
     }
 
     .sidebar {
@@ -286,11 +286,6 @@ html {
     .home-contents .text h3 {
         font-size: 1.5rem;
     }
-
-    .button-85 {
-        width: 60%;
-        height: auto;
-    }
 }
 
 @media screen and (max-width: 992px) {
@@ -313,11 +308,6 @@ html {
     .home-contents .text h3 {
         font-size: 1.3rem;
     }
-
-    .button-85 {
-        width: 40%;
-        font-size: 1rem;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -333,11 +323,6 @@ html {
     .home-contents .text h3 {
         font-size: 1.2rem;
     }
-
-    .button-85 {
-        width: 40%;
-        height: auto;
-    }
 }
 
 @media screen and (max-width: 576px) {
@@ -352,11 +337,6 @@ html {
     .home-contents .text h2,
     .home-contents .text h3 {
         font-size: 1rem;
-    }
-
-    .button-85 {
-        width: 40%;
-        height: auto;
     }
 }
 
@@ -676,11 +656,13 @@ html {
 
 .p-img {
     width: 400px;
+    height: 235px
 }
 
 @media (max-width: 768px) {
     .p-img {
         width: 100%;
+        height: 200px;
     }
 }
 
