@@ -63,7 +63,7 @@ html {
 }
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
@@ -96,6 +96,10 @@ html {
 
 .icon.Home::before {
     content: url(icons/home.svg);
+}
+
+.icon.cv::before {
+    content: url(icons/cv.svg);
 }
 
 .icon.About::before {
