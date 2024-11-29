@@ -13,44 +13,6 @@
     font-family: Syne;
 }
 
-.loading-page {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: var(--color2);
-    height: 100%;
-    width: 100%;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#loadingpage {
-    height: 150px;
-    width: 150px;
-}
-
-@media (max-width: 768px) {
-    #loadingpage {
-        height: 100px;
-        width: 100px;
-    }
-    .name {
-        font-size: 1rem;
-        letter-spacing: 3px;
-    }
-}
-
-.name {
-    font-size: 3rem;
-    color: var(--color1);
-    letter-spacing: 5px;
-    margin-bottom: 1rem;
-}
-
 body::-webkit-scrollbar {
     display: none;
 }
