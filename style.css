@@ -33,6 +33,17 @@
     width: 150px;
 }
 
+@media (max-width: 768px) {
+    #loadingpage {
+        height: 100px;
+        width: 100px;
+    }
+    .name {
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+}
+
 .name {
     font-size: 3rem;
     color: var(--color1);
