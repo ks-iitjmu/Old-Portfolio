@@ -51,7 +51,7 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 ## Contact
 If you have any questions or feedback, feel free to contact me:
 
-- **Email**: [My Email]( 2023uma0221@iitjammu.ac.in)
-- **LinkedIn**: [My LinkedIn Profile]( www.linkedin.com/in/ks-iitjmu)  
+- **Email**: ![My Email]( 2023uma0221@iitjammu.ac.in)
+- **LinkedIn**:![My LinkedIn Profile]( www.linkedin.com/in/ks-iitjmu)  
 
 Feel free to edit and add more specific details to each section as needed.
