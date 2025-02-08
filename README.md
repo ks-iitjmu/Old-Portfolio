@@ -31,11 +31,11 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kunalsharma-iitjmu/kunalsharma-iitjmu.github.io.git
+   git clone https://github.com/ks-iitjmu/Old-Portfolio.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd kunalsharma-iitjmu.github.io
+   cd Old-Portfolio
    ```
 3. Open `index.html` in your preferred web browser to view the website.
 
